@@ -25,16 +25,6 @@ const list = [
 
 const populateList = () => {
   const itemsList = document.querySelector(".todo");
-  list.sort((a, b) => {
-    return a.index - b.index;
-  });
-
-  list.map((item) => {
-    const singleItem = document.createElement("div");
-    singleItem.classList.add("item");
-    singleItem.innerText = item.description + item.index + item.completed;
-    itemsList.appendChild(singleItem);
-  });
 };
 
 populateList();

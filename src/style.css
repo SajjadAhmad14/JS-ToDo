@@ -1,10 +1,40 @@
+body {
+  background-color: #c0c0c0;
+}
 .todo {
-    border: 1px solid black;
-    margin: 0 auto;
-    max-width: 500px;
-    text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+  background-color: #fff;
+  color: rgb(65, 57, 57);
+  padding: 10px 0;
 }
 
-.item {
-    color: red;
+.todo-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid silver;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid silver;
+  padding: 8px 0;
+}
+
+.todo-title div,  .todo-input div{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.fa-refresh {
+  color: rgb(65, 57, 57);
+}
+
+#description {
+  border: none;
+  outline: none;
 }
