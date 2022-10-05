@@ -9,10 +9,14 @@ body {
   padding: 10px 0;
 }
 
+.border {
+  border-bottom: 1px solid silver;
+
+}
+
 .todo-title {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid silver;
   padding: 8px 0;
   font-size: 16px;
   font-weight: bold;
@@ -21,11 +25,10 @@ body {
 .todo-input {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid silver;
   padding: 8px 0;
 }
 
-.todo-title div,  .todo-input div{
+.margins{
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -37,4 +40,10 @@ body {
 #description {
   border: none;
   outline: none;
+}
+
+.item {
+  color: red;
+  display: flex;
+  justify-content: space-between;
 }
