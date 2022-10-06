@@ -1,17 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 body {
   background-color: #c0c0c0;
 }
+
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+
 .todo {
   max-width: 50%;
   margin: 0 auto;
   background-color: #fff;
-  color: rgb(65, 57, 57);
+  color: #413939;
   padding: 10px 0;
 }
 
 .border {
   border-bottom: 1px solid silver;
-
 }
 
 .todo-title {
@@ -28,7 +34,7 @@ body {
   padding: 8px 0;
 }
 
-.margins{
+.margins {
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -46,4 +52,6 @@ body {
   color: red;
   display: flex;
   justify-content: space-between;
+  padding: 8px 0;
+  color: #413939;
 }

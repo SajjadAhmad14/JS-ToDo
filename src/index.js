@@ -34,7 +34,7 @@ const populateList = () => {
     const listItem = document.createElement("div");
     listItem.classList.add("item")
     listItem.classList.add("border");
-    // itemsList.classList.add("margins");
+    itemsList.classList.add("roboto-font");
     listItem.innerHTML = `
     <div class = "margins">
     <input type = "checkbox">
