@@ -32,8 +32,13 @@ const updateStatus = () => {
 
 const clearAllBtn = () => {
   if( list != null) {
+    let updatedList = []
     const btn = document.querySelector(".clear-btn");
-    btn.addEventListener("click", () => {});
+    btn.addEventListener("click", () => {
+      updatedList = getListFromStorage()
+      updatedList = updatedList.filter(item => item.completed == true);
+      storeListToStorage(updatedList);
+    });
   }
 };
 
