@@ -1,4 +1,3 @@
-import "./style.css";
-import "./populateList";
-import "./updateStatus";
-
+import './style.css';
+import { updateStatus } from './updateStatus';
+updateStatus();

@@ -16,6 +16,10 @@ body {
   padding: 10px 0;
 }
 
+.index {
+  display: none;
+}
+
 .border {
   border-bottom: 1px solid silver;
 }
@@ -54,4 +58,14 @@ body {
   justify-content: space-between;
   padding: 8px 0;
   color: #413939;
+}
+
+.clear-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.dots {
+  margin-right: 5px;
 }
