@@ -36,8 +36,9 @@ const clearAllBtn = () => {
     const btn = document.querySelector(".clear-btn");
     btn.addEventListener("click", () => {
       updatedList = getListFromStorage()
-      updatedList = updatedList.filter(item => item.completed == true);
+      updatedList = updatedList.filter(item => item.completed == false);
       storeListToStorage(updatedList);
+      location.reload();
     });
   }
 };
