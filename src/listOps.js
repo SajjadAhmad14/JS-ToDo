@@ -23,7 +23,7 @@ const addItemList = () => {
     obj.index = list.length;
     obj.description = inputField.value;
     obj.completed = false;
-    list.push(obj);
+      list.push(obj);
     list.sort((a, b) => {
       return a.index - b.index;
     });

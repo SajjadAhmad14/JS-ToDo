@@ -30,6 +30,15 @@ const updateStatus = () => {
   }
 };
 
+const deleteItem = () => {
+  const dots = document.querySelectorAll('.dots');
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      dot.remove();
+    })
+  })
+}
+
 const clearAllBtn = () => {
   if( list != null) {
     let updatedList = []
@@ -45,4 +54,4 @@ const clearAllBtn = () => {
 
 clearAllBtn();
 
-export { updateStatus };
+export { updateStatus, deleteItem };

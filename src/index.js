@@ -1,3 +1,4 @@
 import './style.css';
-import { updateStatus } from './updateStatus';
+import { updateStatus, deleteItem } from './updateStatus';
 updateStatus();
+deleteItem();
