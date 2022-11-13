@@ -21,6 +21,7 @@ const populateList = () => {
         </div>
         <div class = "margins">
           <i class="fa-solid fa-ellipsis-vertical dots"></i>
+          <i class="fa fa-trash" id = "hide"></i>
         </div>
         `;
       listContainer.appendChild(listItem);

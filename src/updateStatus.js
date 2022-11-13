@@ -33,8 +33,17 @@ const updateStatus = () => {
 const deleteItem = () => {
   const dots = document.querySelectorAll('.dots');
   dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
+    dot.addEventListener('click', (e) => {
+      const currentElem = e.target;
+      const parentNode = currentElem.parentElement;
+      const del = parentNode.lastElementChild;
+      const grandNode = currentElem.parentElement.parentElement;
+      grandNode.classList.add("bg-change");
       dot.remove();
+      del.setAttribute("id", "show");
+      del.addEventListener("click", () => {
+        grandNode.remove();
+      })
     })
   })
 }

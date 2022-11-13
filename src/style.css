@@ -11,9 +11,8 @@ body {
 .todo {
   max-width: 50%;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #ffc0cb;
   color: #413939;
-  padding: 10px 0;
 }
 
 .index {
@@ -50,6 +49,7 @@ body {
 #description {
   border: none;
   outline: none;
+  background-color: #ffc0cb;
 }
 
 .item {
@@ -64,8 +64,24 @@ body {
   display: block;
   width: 100%;
   padding: 10px 0;
+  background-color: #00ffff;
+  border: none;
+  height: 100%;
 }
 
 .dots {
   margin-right: 5px;
+}
+
+#hide {
+  display: none;
+}
+
+#show {
+  display: block;
+}
+
+
+.bg-change {
+  background-color: #dfd5d5;
 }
