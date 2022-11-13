@@ -31,9 +31,9 @@ const updateStatus = () => {
 };
 
 const deleteItem = () => {
-  const dots = document.querySelectorAll('.dots');
+  const dots = document.querySelectorAll(".dots");
   dots.forEach((dot) => {
-    dot.addEventListener('click', (e) => {
+    dot.addEventListener("click", (e) => {
       const currentElem = e.target;
       const parentNode = currentElem.parentElement;
       const del = parentNode.lastElementChild;
@@ -43,18 +43,31 @@ const deleteItem = () => {
       del.setAttribute("id", "show");
       del.addEventListener("click", () => {
         grandNode.remove();
-      })
-    })
-  })
-}
+        let ind = grandNode.firstElementChild.lastElementChild.innerText;
+        ind = Number(ind);
+        let list = getListFromStorage();
+        list = list.filter((ele) => {
+          return ele.index != ind;
+        });
+        list.forEach(elem => {
+          elem.index = list.indexOf(elem) + 1;
+        })
+        storeListToStorage(list);
+      });
+    });
+  });
+};
 
 const clearAllBtn = () => {
-  if( list != null) {
-    let updatedList = []
+  if (list != null) {
+    let updatedList = [];
     const btn = document.querySelector(".clear-btn");
     btn.addEventListener("click", () => {
-      updatedList = getListFromStorage()
-      updatedList = updatedList.filter(item => item.completed == false);
+      updatedList = getListFromStorage();
+      updatedList = updatedList.filter((item) => item.completed == false);
+      updatedList.forEach(elem => {
+        elem.index = updatedList.indexOf(elem) + 1;
+      })
       storeListToStorage(updatedList);
       location.reload();
     });

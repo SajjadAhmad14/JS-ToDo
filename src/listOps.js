@@ -20,7 +20,7 @@ const addItemList = () => {
     if(list == null) {
         list = []
     }
-    obj.index = list.length;
+    obj.index = list.length + 1;
     obj.description = inputField.value;
     obj.completed = false;
       list.push(obj);
