@@ -11,7 +11,7 @@ const updateStatus = () => {
   }
   if (list != null) {
     boxes.forEach((box) => {
-      const index = box.nextElementSibling.textContent;
+      const index = box.parentElement.lastElementChild.textContent;
       box.addEventListener("click", (e) => {
         list.forEach((item) => {
           if (e.target.checked) {
@@ -42,9 +42,9 @@ const deleteItem = () => {
       dot.remove();
       del.setAttribute("id", "show");
       del.addEventListener("click", () => {
-        grandNode.remove();
-        let ind = grandNode.firstElementChild.lastElementChild.innerText;
+        let ind = grandNode.firstElementChild.lastElementChild.textContent;
         ind = Number(ind);
+        grandNode.remove();
         let list = getListFromStorage();
         list = list.filter((ele) => {
           return ele.index != ind;

@@ -12,12 +12,14 @@ const populateList = () => {
       listItem.classList.add("border");
       itemsList.classList.add("roboto-font");
       listItem.innerHTML = `
-        <div class = "margins">
-        <input type = "checkbox" class = "check">
-        ${item.description}
-        <div class = "index">
-        ${item.index}
-        </div>
+        <div class = "margins item-head">
+          <input type = "checkbox" class = "check">        
+          <div class = "detail" contentEditable="true">  
+            ${item.description}
+          </div>
+          <div class = "index">
+            ${item.index}
+          </div>
         </div>
         <div class = "margins">
           <i class="fa-solid fa-ellipsis-vertical dots"></i>

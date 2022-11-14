@@ -37,6 +37,10 @@ body {
   padding: 8px 0;
 }
 
+.item-head {
+  display: flex;
+}
+
 .margins {
   margin-right: 10px;
   margin-left: 10px;
