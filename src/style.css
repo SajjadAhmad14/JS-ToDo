@@ -10,7 +10,7 @@ body {
 
 .todo {
   max-width: 50%;
-  margin: 0 auto;
+  margin: auto;
   background-color: #ffc0cb;
   color: #413939;
 }
@@ -23,10 +23,6 @@ body {
   margin-left: 5px;
   outline: none;
   display: inline;
-}
-
-.border {
-  border-bottom: 1px solid silver;
 }
 
 .todo-title {
@@ -70,6 +66,12 @@ body {
   color: #413939;
 }
 
+.enter-btn {
+  /* margin-right: 10px; */
+  position: relative;
+  right: 20px;
+}
+
 .clear-btn {
   display: block;
   width: 100%;
@@ -94,4 +96,10 @@ body {
 
 .bg-change {
   background-color: #dfd5d5;
+}
+
+@media only screen and (min-width: 768px) {
+  .enter-btn {
+    right: 0;
+  }
 }
