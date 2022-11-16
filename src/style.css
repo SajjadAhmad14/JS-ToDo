@@ -19,6 +19,12 @@ body {
   display: none;
 }
 
+.detail {
+  margin-left: 5px;
+  outline: none;
+  display: inline;
+}
+
 .border {
   border-bottom: 1px solid silver;
 }

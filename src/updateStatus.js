@@ -49,9 +49,9 @@ const deleteItem = () => {
         list = list.filter((ele) => {
           return ele.index != ind;
         });
-        list.forEach(elem => {
+        list.forEach((elem) => {
           elem.index = list.indexOf(elem) + 1;
-        })
+        });
         storeListToStorage(list);
       });
     });
@@ -65,15 +65,44 @@ const clearAllBtn = () => {
     btn.addEventListener("click", () => {
       updatedList = getListFromStorage();
       updatedList = updatedList.filter((item) => item.completed == false);
-      updatedList.forEach(elem => {
+      updatedList.forEach((elem) => {
         elem.index = updatedList.indexOf(elem) + 1;
-      })
+      });
       storeListToStorage(updatedList);
       location.reload();
     });
   }
 };
 
+const editTask = () => {
+  let discText = "";
+  let index = 0;
+  const discs = document.querySelectorAll(".detail");
+  discs.forEach((disc) => {
+    disc.addEventListener("keydown", (e) => {
+      if(e.key === 'Enter') {
+        e.preventDefault();
+        disc.removeAttribute('contenteditable');
+      }
+    })
+    disc.addEventListener("input", (e) => {
+      if (e.keyCode === 13) {
+        e.preventDefault();
+      }
+      discText = e.target.textContent;
+      index = Number(e.target.parentElement.lastElementChild.textContent);
+      let updatedList = getListFromStorage();
+      updatedList.forEach((task) => {
+        if (task.index == index) {
+          task.description = discText;
+        }
+      });
+      storeListToStorage(updatedList);
+    });
+  });
+};
+
 clearAllBtn();
+editTask();
 
 export { updateStatus, deleteItem };
